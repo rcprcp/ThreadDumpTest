@@ -46,7 +46,7 @@ public class ThreadDumpTest {
 
         long elapsedNanos = System.nanoTime() - startNanos;
         messages.add(String.format("gathered %d thread dumps.  elapsed times %d ns %d us %d ms total; %d ms per thread dump",
-                ITERATIONS, elapsedNanos, elapsedNanos / 1_000, elapsedNanos / 1_000_000, elapsedNanos/1_000_000/1_100));
+                ITERATIONS, elapsedNanos, elapsedNanos / 1_000, elapsedNanos / 1_000_000, elapsedNanos/1_000_000/1_000));
 
         for (ThreadInfo[] ti : queue) {
             System.out.println(threadInfoToString(ti));
